@@ -11,6 +11,7 @@ public class Gun : MonoBehaviour
     [Header("GunProperties")] 
     [SerializeField] private float coolDown;
     private float actualCoolDown;
+    private bool shootbool;
     
     [Header("BulletProperties")] 
     [SerializeField] private float speed;
@@ -23,7 +24,7 @@ public class Gun : MonoBehaviour
         if (actualCoolDown <= 0)
         {
 
-            if (Input.GetKeyDown(KeyCode.Mouse0))
+            if (shootbool)
             {
                 var projectile = Instantiate(bullet, spawnPoint.position, spawnPoint.rotation);
                 projectile.GetComponent<Rigidbody2D>().velocity = dir.normalized * speed;
@@ -35,5 +36,13 @@ public class Gun : MonoBehaviour
         {
             actualCoolDown -= Time.deltaTime;
         }
+
+        shootbool = false;
+    }
+
+
+    public void shoot()
+    {
+        shootbool = true;
     }
 }
