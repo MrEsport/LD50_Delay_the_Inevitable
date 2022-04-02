@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private bool isClibling;
     public GameObject lastLadder;
     public Transform target;
+    public float plusoumoins;
 
 
 
@@ -42,10 +43,12 @@ public class PlayerController : MonoBehaviour
             if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
             {
                 rb.velocity = new Vector2(speed, rb.velocity.y);
+                transform.eulerAngles = new Vector3(0, 0, 0);
             }
             else if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
             {
                 rb.velocity = new Vector2(-speed, rb.velocity.y);
+                transform.eulerAngles = new Vector3(0, 180, 0);
             }
             else
             {
@@ -59,7 +62,7 @@ public class PlayerController : MonoBehaviour
             float step = ladderSpeed * Time.deltaTime;
             
             transform.position = Vector2.MoveTowards(transform.position, target.position, step);
-            if (transform.position == target.position)
+            if (transform.position.y >= target.position.y - plusoumoins && transform.position.y <= target.position.y + plusoumoins) 
             {
                 isClibling = false;
                 rb.gravityScale = 1;
@@ -70,19 +73,21 @@ public class PlayerController : MonoBehaviour
         switch (closeToLadderenum)
         {
             case LADDERENUM.TOP :
-                if (Input.GetKeyDown(KeyCode.DownArrow))
+                if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S))
                 {
+                    rb.velocity = Vector2.zero;
                     transform.position = lastLadder.GetComponent<Ladder>().topPos.position;
                     target = lastLadder.GetComponent<Ladder>().bottomPos;
                     isClibling = true;
-                    
+
                 }
 
                 break;
             
             case LADDERENUM.BOTTOM :
-                if (Input.GetKeyDown(KeyCode.UpArrow))
+                if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
                 {
+                    rb.velocity = Vector2.zero;
                     transform.position = lastLadder.GetComponent<Ladder>().bottomPos.position;
                     target = lastLadder.GetComponent<Ladder>().topPos;
                     isClibling = true;

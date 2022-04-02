@@ -224,6 +224,7 @@ MonoBehaviour:
   isClibling: 0
   lastLadder: {fileID: 0}
   target: {fileID: 0}
+  plusoumoins: 0.1
 --- !u!1 &456162404
 GameObject:
   m_ObjectHideFlags: 0
