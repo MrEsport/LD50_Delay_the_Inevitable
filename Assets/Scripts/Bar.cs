@@ -21,7 +21,7 @@ public class Bar : MonoBehaviour
 
     private bool isFlooding = false;
 
-    [SerializeField] private int floodingSpeed = 2;
+    [SerializeField] private float floodingSpeed = 2;
     [SerializeField] private float minFlood = 0f;
     [SerializeField] private float maxFlood = 100f;
 
@@ -52,7 +52,10 @@ public class Bar : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Keypad2))
             BucketAddFlood(10f);
 #endif
+    }
 
+    private void FixedUpdate()
+    {
         if (isFlooding)
             UpdateFloodLevel();
     }
@@ -71,7 +74,7 @@ public class Bar : MonoBehaviour
 
     private void UpdateFloodLevel()
     {
-        FloodLevel += floodingSpeed * Time.deltaTime;
+        FloodLevel += floodingSpeed * Time.fixedDeltaTime;
         FloodLevel = Mathf.Clamp(FloodLevel, minFlood, maxFlood);
 
         OnFloodValueChanged.Invoke(Mathf.RoundToInt(FloodLevel) / maxFlood);
