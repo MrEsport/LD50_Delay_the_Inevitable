@@ -57,7 +57,7 @@ public class EnemyController : MonoBehaviour
 
     public void BoatReached()
     {
-        Debug.Log("attack");
+        Captain.myCaptain.OnShipHit?.Invoke();
         transform.DOMoveY(transform.position.y - 4, .5f).SetEase(Ease.Linear).onComplete += WaitToAttackAgain;
 
     }
