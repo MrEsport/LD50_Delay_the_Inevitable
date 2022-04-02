@@ -8,11 +8,13 @@ public class PlayerController : MonoBehaviour
     [Header("Essentials")] 
     private Rigidbody2D rb;
     private BoxCollider2D bc;
-    private SpriteRenderer sr;
+    //private SpriteRenderer sr;
+    private Gun gun;
     
     [Header("Movement")]
     [SerializeField] private float speed;
     [SerializeField] private float ladderSpeed;
+    [SerializeField] private boatLocation location;
 
     [Header("Ladders")]
     [SerializeField] private LADDERENUM closeToLadderenum;
@@ -21,8 +23,17 @@ public class PlayerController : MonoBehaviour
     public Transform target;
     public float plusoumoins;
 
+    [Header("Bucket")]
+    private bool bucketFull;
+    
 
 
+
+    public enum boatLocation
+    {
+        DECK,
+        HOLD,
+    }
     public enum LADDERENUM
     {
         NONE,
@@ -38,7 +49,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (!isClibling)
+        if (!isClibling) // Not Clibling---------------------------------------------------------------
         {
             if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
             {
@@ -54,8 +65,17 @@ public class PlayerController : MonoBehaviour
             {
                 rb.velocity = new Vector2(0, rb.velocity.y);
             }
+
+            switch (location)
+            {
+                case boatLocation.DECK :
+                    
+                    break;
+                case boatLocation.HOLD :
+                    break;
+            }
         }
-        else
+        else // Clibling---------------------------------------------------------------
         {
             rb.gravityScale = 0;
             bc.enabled = false;
@@ -67,10 +87,13 @@ public class PlayerController : MonoBehaviour
                 isClibling = false;
                 rb.gravityScale = 1;
                 bc.enabled = true;
+
+                if (location == boatLocation.DECK) location = boatLocation.HOLD;
+                else location = boatLocation.DECK;
             }
         }
 
-        switch (closeToLadderenum)
+        switch (closeToLadderenum) // Near to a ladder ----------------------------------------------------------
         {
             case LADDERENUM.TOP :
                 if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S))
@@ -97,6 +120,8 @@ public class PlayerController : MonoBehaviour
                 break;
         }
     }
+    
+    
 
     private void OnTriggerEnter2D(Collider2D other)
     {
