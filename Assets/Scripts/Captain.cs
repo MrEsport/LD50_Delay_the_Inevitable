@@ -17,7 +17,7 @@ public class Captain : MonoBehaviour
     public Transform aboveWaterPoint;
     public Transform drownPoint;
 
-    public float HullDamageAndRepairValue = .5f;
+    [SerializeField] private float HullDamageAndRepairValue = .5f;
 
     private int hullHoles = 3;
 
@@ -56,7 +56,10 @@ public class Captain : MonoBehaviour
 
     private void LowerShipLevel(float percentage)
     {
-        boatTransform.position = Vector2.Lerp(aboveWaterPoint.position, drownPoint.position, percentage);
+        Vector2 targetPosition = Vector2.Lerp(aboveWaterPoint.position, drownPoint.position, percentage);
+
+        float easeT = Vector2.Distance(boatTransform.position, targetPosition) >= .02f ? .18f : 1;
+        boatTransform.position = Vector2.Lerp(boatTransform.position, targetPosition, easeT);
     }
 
     private void Removelisteners()
