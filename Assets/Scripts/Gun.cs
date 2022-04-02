@@ -8,19 +8,32 @@ public class Gun : MonoBehaviour
     [SerializeField] private GameObject bullet;
     [SerializeField] private Transform spawnPoint;
 
-    [Header("BulletProperties")] [SerializeField]
-    private float speed;
+    [Header("GunProperties")] 
+    [SerializeField] private float coolDown;
+    private float actualCoolDown;
+    
+    [Header("BulletProperties")] 
+    [SerializeField] private float speed;
     void Update()
     {
         Vector3 dir = Input.mousePosition - Camera.main.WorldToScreenPoint(transform.position);
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (actualCoolDown <= 0)
         {
-            var projectile = Instantiate(bullet, spawnPoint.position, spawnPoint.rotation);
 
-            projectile.GetComponent<Rigidbody2D>().velocity = dir.normalized * speed;
+            if (Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                var projectile = Instantiate(bullet, spawnPoint.position, spawnPoint.rotation);
+                projectile.GetComponent<Rigidbody2D>().velocity = dir.normalized * speed;
+
+                actualCoolDown = coolDown;
+            }
+        }
+        else
+        {
+            actualCoolDown -= Time.deltaTime;
         }
     }
 }
