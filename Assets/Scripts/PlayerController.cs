@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
     [Header("Essentials")] 
     private Rigidbody2D rb;
     private BoxCollider2D bc;
-    //private SpriteRenderer sr;
+    private SpriteRenderer sr;
     private Gun gun;
     
     [Header("Movement")]
