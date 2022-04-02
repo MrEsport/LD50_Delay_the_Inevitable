@@ -198,7 +198,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 902320894353088752, guid: 86c33773e247d36479c72423e63c554c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.66
+      value: -4.88
       objectReference: {fileID: 0}
     - target: {fileID: 902320894715511067, guid: 86c33773e247d36479c72423e63c554c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -248,13 +248,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 902320894918512274, guid: 86c33773e247d36479c72423e63c554c, type: 3}
+      propertyPath: BaseEnemiesSpawnRate
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 902320894918512275, guid: 86c33773e247d36479c72423e63c554c, type: 3}
       propertyPath: m_Name
       value: EnemyManager
       objectReference: {fileID: 0}
     - target: {fileID: 902320895233905359, guid: 86c33773e247d36479c72423e63c554c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.66
+      value: -4.88
       objectReference: {fileID: 0}
     - target: {fileID: 902320895969710606, guid: 86c33773e247d36479c72423e63c554c, type: 3}
       propertyPath: m_LocalPosition.x

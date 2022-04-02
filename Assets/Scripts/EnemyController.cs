@@ -13,6 +13,7 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private float timeBetweenAttacks = 3;
     [SerializeField] private Collider2D tentacleCollider;
     private float timer = 0;
+    [SerializeField] ParticleSystem particles;
 
     private void Update()
     {
@@ -57,6 +58,7 @@ public class EnemyController : MonoBehaviour
 
     public void BoatReached()
     {
+        Instantiate(particles, transform.position, Quaternion.identity);
         Captain.myCaptain.OnShipHit?.Invoke();
         transform.DOMoveY(transform.position.y - 10, 1f).SetEase(Ease.Linear).onComplete += WaitToAttackAgain;
 

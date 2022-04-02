@@ -47,9 +47,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   endPoint: {fileID: 0}
   startPoint: {fileID: 0}
-  tenticleToBoatTime: 5
+  tenticleToBoatTime: 2
   timeBetweenAttacks: 3
   tentacleCollider: {fileID: 6713808034369038479}
+  particles: {fileID: 3294371649334735943, guid: bc6a11c37d6796640b3e70cd187cc40e, type: 3}
 --- !u!70 &6713808034369038479
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -63,8 +64,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 1.335574}
-  m_Size: {x: 0.5, y: 2.9761045}
+  m_Offset: {x: 0, y: 0.0068142414}
+  m_Size: {x: 0.5, y: 3.0306177}
   m_Direction: 0
 --- !u!1 &8837701568899011396
 GameObject:
@@ -91,7 +92,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8837701568899011396}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 1.324, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 3, y: 1.5, z: 3}
   m_Children: []
   m_Father: {fileID: 8369006444379001366}
