@@ -69,6 +69,7 @@ public class EnemyController : MonoBehaviour
             transform.DOKill();
             enemyManager.EnemyKilled();
             Debug.Log("dead");
+            Destroy((collision.gameObject));
             Destroy(this.gameObject);
         }
     }

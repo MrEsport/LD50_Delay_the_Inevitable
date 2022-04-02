@@ -74,6 +74,7 @@ public class PlayerController : MonoBehaviour
                         gun.shoot();
                         break;
                     case boatLocation.HOLD:
+                        Captain.myCaptain.OnShipRepair.Invoke();
                         break;
                 }
             }

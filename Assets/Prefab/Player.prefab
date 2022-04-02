@@ -241,8 +241,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 6504695320291103294, guid: 3999aacc261968541a049e98e0991b9b, type: 3}
   spawnPoint: {fileID: 3864766390133206709}
-  coolDown: 0.5
-  speed: 10
+  coolDown: 0.75
+  speed: 15
 --- !u!1 &3864766390794491771
 GameObject:
   m_ObjectHideFlags: 0
@@ -429,3 +429,4 @@ MonoBehaviour:
   lastLadder: {fileID: 0}
   target: {fileID: 0}
   plusoumoins: 0.1
+  bucketFull: 0
