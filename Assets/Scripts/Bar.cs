@@ -35,9 +35,9 @@ public class Bar : MonoBehaviour
     {
 #if UNITY_EDITOR
         if (Input.GetKeyDown(KeyCode.KeypadPlus))
-            IncreaseFloodingSpeed();
+            IncreaseFloodingSpeed(5f);
         else if (Input.GetKeyDown(KeyCode.KeypadMinus))
-            DecreaseFloodingSpeed();
+            DecreaseFloodingSpeed(5f);
 
         else if (Input.GetKeyDown(KeyCode.KeypadEnter))
         {
@@ -60,17 +60,20 @@ public class Bar : MonoBehaviour
             UpdateFloodLevel();
     }
 
-    public void BucketRemoveFlood(float value) =>
-        FloodLevel -= value;
+    public void BucketRemoveFlood(float value)
+        => FloodLevel -= value;
 
-    public void BucketAddFlood(float value) =>
-        FloodLevel += value;
+    public void BucketAddFlood(float value)
+        => FloodLevel += value;
+
+    public void IncreaseFloodingSpeed(float value)
+        => floodingSpeed += value;
+
+    public void DecreaseFloodingSpeed(float value)
+        => floodingSpeed -= value;
 
     private void StartFlooding() => isFlooding = true;
     private void StopFlooding() => isFlooding = false;
-
-    private void IncreaseFloodingSpeed() => floodingSpeed += 5;
-    private void DecreaseFloodingSpeed() => floodingSpeed -= 5;
 
     private void UpdateFloodLevel()
     {
