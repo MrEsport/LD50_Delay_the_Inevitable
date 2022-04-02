@@ -27,4 +27,14 @@ public class FillToFloodLevel : MonoBehaviour
     {
         transform.localScale = new Vector2(transform.localScale.x, floodValue);
     }
+
+    private void RemoveListeners()
+    {
+        if (slider != null)
+            Bar.Instance.OnFloodValueChanged.RemoveListener(SliderOnValueChanged);
+        else
+            Bar.Instance.OnFloodValueChanged.RemoveListener(ScaleOnValueChanged);
+    }
+
+    private void OnDestroy() => RemoveListeners();
 }
