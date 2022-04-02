@@ -25,6 +25,8 @@ public class PlayerController : MonoBehaviour
 
     [Header("Bucket")]
     public bool bucketFull;
+
+    [Header("Repaire")] public int plank;
     
 
 
@@ -74,7 +76,12 @@ public class PlayerController : MonoBehaviour
                         gun.shoot();
                         break;
                     case boatLocation.HOLD:
-                        Captain.myCaptain.OnShipRepair.Invoke();
+                        if (plank > 0)
+                        {
+                            Captain.myCaptain.OnShipRepair.Invoke();
+                            plank--;
+                        }
+
                         break;
                 }
             }
@@ -85,7 +92,6 @@ public class PlayerController : MonoBehaviour
                 {
                     case boatLocation.DECK:
                         if (bucketFull) bucketFull = false;
-                        
                         break;
                     case boatLocation.HOLD:
                         if (!bucketFull)
