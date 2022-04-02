@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -25,6 +26,12 @@ public class PlayerController : MonoBehaviour
 
     [Header("Bucket")]
     public bool bucketFull;
+    private float fillPourcent;
+    public float fillSpeed;
+    private bool clickUp;
+
+    [SerializeField] private Image bucketImage;
+    [SerializeField] private Image bucketImageFill;
 
     [Header("Repaire")] public int plank;
     
@@ -53,60 +60,17 @@ public class PlayerController : MonoBehaviour
     {
         if (!isClibling) // Not Clibling---------------------------------------------------------------
         {
-            if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
-            {
-                rb.velocity = new Vector2(speed, rb.velocity.y);
-                transform.eulerAngles = new Vector3(0, 0, 0);
-            }
-            else if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
-            {
-                rb.velocity = new Vector2(-speed, rb.velocity.y);
-                transform.eulerAngles = new Vector3(0, 180, 0);
-            }
-            else
-            {
-                rb.velocity = new Vector2(0, rb.velocity.y);
-            }
+            move();
 
-            if (Input.GetKeyDown(KeyCode.Mouse0))
-            {
-                switch (location)
-                {
-                    case boatLocation.DECK:
-                        gun.shoot();
-                        break;
-                    case boatLocation.HOLD:
-                        if (plank > 0)
-                        {
-                            Captain.myCaptain.OnShipRepair.Invoke();
-                            plank--;
-                        }
+            leftclick();
 
-                        break;
-                }
-            }
+            rightClickDown();
+
+
+            rightClick();
             
-            if (Input.GetKeyDown(KeyCode.Mouse1))
-            {
-                switch (location)
-                {
-                    case boatLocation.DECK:
-                        if (bucketFull) bucketFull = false;
-                        break;
-                    case boatLocation.HOLD:
-                        if (!bucketFull)
-                        {
-                            bucketFull = true;
-                            Bar.Instance.BucketRemoveFlood(10f);
-                        }
-                        else
-                        {
-                            bucketFull = false;
-                            Bar.Instance.BucketAddFlood(10f);
-                        }
-                        break;
-                }
-            }
+            
+            rightClickUp();
         }
         else // Clibling---------------------------------------------------------------
         {
@@ -152,10 +116,120 @@ public class PlayerController : MonoBehaviour
 
                 break;
         }
+        
+        
+        
+        
+        
+
+        if (fillPourcent >= fillSpeed)
+        {
+            switch (location)
+            {
+                case boatLocation.HOLD :
+                    if (!bucketFull)
+                    {
+                        bucketFull = true;
+                        Bar.Instance.BucketRemoveFlood(10f);
+                        bucketImage.color = Color.blue;
+                        bucketImage.color = Color.white;
+                    }
+                    break;
+            }
+
+            clickUp = true;
+            fillPourcent = 0;
+        }
+    }
+
+    void move()
+    {
+        if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
+        {
+            rb.velocity = new Vector2(speed, rb.velocity.y);
+            transform.eulerAngles = new Vector3(0, 0, 0);
+        }
+        else if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
+        {
+            rb.velocity = new Vector2(-speed, rb.velocity.y);
+            transform.eulerAngles = new Vector3(0, 180, 0);
+        }
+        else
+        {
+            rb.velocity = new Vector2(0, rb.velocity.y);
+        }
+    }
+
+    void leftclick()
+    {
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            switch (location)
+            {
+                case boatLocation.DECK:
+                    gun.shoot();
+                    break;
+                case boatLocation.HOLD:
+                    if (plank > 0)
+                    {
+                        Captain.myCaptain.OnShipRepair.Invoke();
+                        plank--;
+                    }
+
+                    break;
+            }
+        }
+    }
+
+    void rightClickUp()
+    {
+        if(Input.GetKeyUp(KeyCode.Mouse1))
+        {
+            clickUp = false;
+            if (!bucketFull)
+            {
+                fillPourcent = 0;
+                bucketImageFill.fillAmount = (fillPourcent / fillSpeed);
+            }
+        }
+    }
+
+    void rightClickDown()
+    {
+        if (Input.GetKeyDown(KeyCode.Mouse1))
+        {
+            if (location == boatLocation.HOLD && bucketFull)
+            {
+                bucketFull = false;
+                Bar.Instance.BucketAddFlood(10f);
+                bucketImageFill.color = Color.white;
+                bucketImageFill.color = Color.blue;
+                clickUp = true;
+
+            }
+
+            if (location == boatLocation.DECK && bucketFull)
+            {
+                bucketFull = false;
+                bucketImageFill.color = Color.white;
+                bucketImageFill.color = Color.blue;
+                clickUp = true;
+            }
+        }
     }
     
-    
-
+    void rightClick()
+    {
+        if (Input.GetKey(KeyCode.Mouse1) && !clickUp)
+        {
+            if (location == boatLocation.HOLD && !bucketFull)
+            {
+                fillPourcent += Time.deltaTime;
+                bucketImageFill.fillAmount = (fillPourcent / fillSpeed);
+            }
+                
+        }
+    }
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "LadderUp")
