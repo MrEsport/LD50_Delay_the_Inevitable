@@ -7,7 +7,7 @@ public class Menu : MonoBehaviour
 {
     public void Play()
     {
-        SceneManager.LoadScene("Luca_Scene");
+        SceneManager.LoadScene("Enemy");
     }
 
     public void Quit()
