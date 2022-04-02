@@ -18,6 +18,7 @@ public class Captain : MonoBehaviour
     public Transform drownPoint;
 
     [SerializeField] private float HullDamageAndRepairValue = .5f;
+    [SerializeField] private int minHolesNumber = 3;
 
     private int hullHoles = 3;
 
@@ -32,6 +33,9 @@ public class Captain : MonoBehaviour
         OnShipHit.AddListener(AddHole);
         OnShipRepair.AddListener(RepairHole);
         Bar.Instance.OnFloodValueChanged.AddListener(LowerShipLevel);
+
+        // Initialize UI
+        UIManager.Instance.OnHolesUpdate.Invoke(hullHoles);
     }
 
     private void Update()
@@ -44,14 +48,23 @@ public class Captain : MonoBehaviour
 
     private void AddHole()
     {
-        hullHoles++;
+        AddToHoleNumber(1);
         Bar.Instance.IncreaseFloodingSpeed(HullDamageAndRepairValue);
     }
 
     private void RepairHole()
     {
-        hullHoles--;
+        if (hullHoles <= minHolesNumber)
+            return;
+
+        AddToHoleNumber(-1);
         Bar.Instance.DecreaseFloodingSpeed(HullDamageAndRepairValue);
+    }
+
+    private void AddToHoleNumber(int value)
+    {
+        hullHoles += value;
+        UIManager.Instance.OnHolesUpdate.Invoke(hullHoles);
     }
 
     private void LowerShipLevel(float percentage)

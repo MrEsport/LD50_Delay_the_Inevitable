@@ -30,9 +30,6 @@ public class PlayerController : MonoBehaviour
     public float fillSpeed;
     private bool clickUp;
 
-    [SerializeField] private Image bucketImage;
-    [SerializeField] private Image bucketImageFill;
-
     [Header("Repaire")] public int plank;
     
 
@@ -54,6 +51,9 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         bc = GetComponent<BoxCollider2D>();
         sr = transform.GetChild(0).GetComponent<SpriteRenderer>();
+
+        // Initialize UI
+        UIManager.Instance.OnPlanksUpdate.Invoke(plank);
     }
 
     void Update()
@@ -131,8 +131,6 @@ public class PlayerController : MonoBehaviour
                     {
                         bucketFull = true;
                         Bar.Instance.BucketRemoveFlood(10f);
-                        bucketImage.color = Color.blue;
-                        bucketImage.color = Color.white;
                     }
                     break;
             }
@@ -140,6 +138,12 @@ public class PlayerController : MonoBehaviour
             clickUp = true;
             fillPourcent = 0;
         }
+    }
+
+    public void AddToPlankNumber(int value)
+    {
+        plank += value;
+        UIManager.Instance.OnPlanksUpdate.Invoke(plank);
     }
 
     void move()
@@ -173,7 +177,7 @@ public class PlayerController : MonoBehaviour
                     if (plank > 0)
                     {
                         Captain.myCaptain.OnShipRepair.Invoke();
-                        plank--;
+                        AddToPlankNumber(-1);
                     }
 
                     break;
@@ -189,7 +193,7 @@ public class PlayerController : MonoBehaviour
             if (!bucketFull)
             {
                 fillPourcent = 0;
-                bucketImageFill.fillAmount = (fillPourcent / fillSpeed);
+                UIManager.Instance.OnBucketUpdate.Invoke(fillPourcent / fillSpeed);
             }
         }
     }
@@ -202,8 +206,6 @@ public class PlayerController : MonoBehaviour
             {
                 bucketFull = false;
                 Bar.Instance.BucketAddFlood(10f);
-                bucketImageFill.color = Color.white;
-                bucketImageFill.color = Color.blue;
                 clickUp = true;
 
             }
@@ -211,8 +213,6 @@ public class PlayerController : MonoBehaviour
             if (location == boatLocation.DECK && bucketFull)
             {
                 bucketFull = false;
-                bucketImageFill.color = Color.white;
-                bucketImageFill.color = Color.blue;
                 clickUp = true;
             }
         }
@@ -225,7 +225,7 @@ public class PlayerController : MonoBehaviour
             if (location == boatLocation.HOLD && !bucketFull)
             {
                 fillPourcent += Time.deltaTime;
-                bucketImageFill.fillAmount = (fillPourcent / fillSpeed);
+                UIManager.Instance.OnBucketUpdate.Invoke(fillPourcent / fillSpeed);
             }
                 
         }
