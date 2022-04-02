@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8369006444379001366}
   - component: {fileID: 4313011480491006329}
+  - component: {fileID: 6713808034369038479}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -45,7 +46,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   endPoint: {fileID: 0}
-  tenticleSpeed: 3
+  startPoint: {fileID: 0}
+  tenticleToBoatTime: 5
+  timeBetweenAttacks: 3
+  collider: {fileID: 6713808034369038479}
+--- !u!70 &6713808034369038479
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 349525470493114135}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 1.335574}
+  m_Size: {x: 0.5, y: 2.9761045}
+  m_Direction: 0
 --- !u!1 &8837701568899011396
 GameObject:
   m_ObjectHideFlags: 0

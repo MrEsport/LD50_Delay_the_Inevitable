@@ -7,14 +7,42 @@ public class EnemyController : MonoBehaviour
 {
     [SerializeField] private Transform endPoint;
     [SerializeField] private Transform startPoint;
-    public float tenticleSpeed = 5;
+    public float tenticleToBoatTime = 5;
+    private EnemyManager enemyManager;
+    bool waitingToAttack;
+    [SerializeField] private float timeBetweenAttacks = 3;
+    [SerializeField] private Collider2D tentacleCollider;
+    private float timer = 0;
 
-    public void Init(Transform startTransform, Transform endTransform)
+    private void Update()
+    {
+        if (waitingToAttack)
+        {
+            timer -= Time.deltaTime;
+            if(timer <= 0)
+            {
+                waitingToAttack = false;
+                tentacleCollider.enabled = true;
+                Entrance();
+            }
+        }
+    }
+
+    public void Init(Transform startTransform, Transform endTransform, EnemyManager _enemyManager) // and boat hit event
     {
         endPoint = endTransform;
         startPoint = startTransform;
+        enemyManager = _enemyManager;
         Entrance();
     }
+
+    public void WaitToAttackAgain()
+    {
+        tentacleCollider.enabled = false;
+        waitingToAttack = true;
+        timer = timeBetweenAttacks + Random.Range(-.5f, 1f);
+    }
+
     public void Entrance()
     {
         transform.position = startPoint.position;
@@ -24,13 +52,13 @@ public class EnemyController : MonoBehaviour
 
     public void StartMovement()
     {
-        transform.DOMoveX(endPoint.transform.position.x, tenticleSpeed).SetEase(Ease.InCubic).onComplete += BoatReached;
+        transform.DOMoveX(endPoint.transform.position.x, tenticleToBoatTime).SetEase(Ease.InCubic).onComplete += BoatReached;
     }
 
     public void BoatReached()
     {
         Debug.Log("attack");
-        transform.DOMoveY(transform.position.y - 2, .5f).SetEase(Ease.Linear).onComplete += Entrance ;
+        transform.DOMoveY(transform.position.y - 4, .5f).SetEase(Ease.Linear).onComplete += WaitToAttackAgain;
 
     }
 
@@ -39,8 +67,9 @@ public class EnemyController : MonoBehaviour
         if (collision.CompareTag("Bullet"))
         {
             transform.DOKill();
+            enemyManager.EnemyKilled();
             Debug.Log("dead");
-            Destroy(this);
+            Destroy(this.gameObject);
         }
     }
 }
