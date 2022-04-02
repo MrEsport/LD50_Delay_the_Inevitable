@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private BoxCollider2D bc;
     private SpriteRenderer sr;
-    private Gun gun;
+    public Gun gun;
     
     [Header("Movement")]
     [SerializeField] private float speed;
@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour
     public float plusoumoins;
 
     [Header("Bucket")]
-    private bool bucketFull;
+    public bool bucketFull;
     
 
 
@@ -66,13 +66,39 @@ public class PlayerController : MonoBehaviour
                 rb.velocity = new Vector2(0, rb.velocity.y);
             }
 
-            switch (location)
+            if (Input.GetKeyDown(KeyCode.Mouse0))
             {
-                case boatLocation.DECK :
-                    
-                    break;
-                case boatLocation.HOLD :
-                    break;
+                switch (location)
+                {
+                    case boatLocation.DECK:
+                        gun.shoot();
+                        break;
+                    case boatLocation.HOLD:
+                        break;
+                }
+            }
+            
+            if (Input.GetKeyDown(KeyCode.Mouse1))
+            {
+                switch (location)
+                {
+                    case boatLocation.DECK:
+                        if (bucketFull) bucketFull = false;
+                        
+                        break;
+                    case boatLocation.HOLD:
+                        if (!bucketFull)
+                        {
+                            bucketFull = true;
+                            Bar.Instance.BucketRemoveFlood(10f);
+                        }
+                        else
+                        {
+                            bucketFull = false;
+                            Bar.Instance.BucketAddFlood(10f);
+                        }
+                        break;
+                }
             }
         }
         else // Clibling---------------------------------------------------------------

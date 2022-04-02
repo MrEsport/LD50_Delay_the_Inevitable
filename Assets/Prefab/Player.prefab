@@ -420,9 +420,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3eef12c3af3d0b14f8a0134f5263f046, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gun: {fileID: 3864766390257863099}
   speed: 5
   ladderSpeed: 5
-  location: 0
+  location: 1
   closeToLadderenum: 0
   isClibling: 0
   lastLadder: {fileID: 0}
