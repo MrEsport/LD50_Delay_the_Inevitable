@@ -47,8 +47,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   endPoint: {fileID: 0}
   startPoint: {fileID: 0}
-  tenticleToBoatTime: 2
-  timeBetweenAttacks: 3
+  tenticleToBoatTime: 4
+  timeBetweenAttacks: 4
   tentacleCollider: {fileID: 6713808034369038479}
   particles: {fileID: 3294371649334735943, guid: bc6a11c37d6796640b3e70cd187cc40e, type: 3}
 --- !u!70 &6713808034369038479

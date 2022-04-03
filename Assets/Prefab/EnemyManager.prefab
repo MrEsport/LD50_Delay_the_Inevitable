@@ -144,9 +144,10 @@ MonoBehaviour:
   endPoints:
   - {fileID: 902320895969710606}
   - {fileID: 902320894715511067}
-  enemySpawnTime: 2
+  enemySpawnTime: 3
   BaseEnemiesSpawnRate: 2
   betweenWaveTime: 15
+  startDelayTime: 10
 --- !u!1 &902320895233905344
 GameObject:
   m_ObjectHideFlags: 0
