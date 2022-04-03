@@ -54,7 +54,8 @@ public class ResourceManager : MonoBehaviour
     public void SpawnBarrel()
     {
         numberToSpawn--;
-        if(numberToSpawn > 0)
+        numberOfBarrelsSpawned++;
+        if (numberToSpawn > 0)
         {
             timer = Random.Range(minSpawnTime, maxSpawnTime);
         }
