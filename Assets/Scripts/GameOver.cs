@@ -6,8 +6,9 @@ using UnityEngine.SceneManagement;
 public class GameOver : MonoBehaviour
 {
     public GameObject goScreen;
+    public GameObject leManagerQuiNestPasUneInstance;
 
-    
+
     #region Singleton
     private static GameOver instance;
     public static GameOver Instance { get => instance; set => instance = value; }
@@ -24,6 +25,7 @@ public class GameOver : MonoBehaviour
     public void callGameOver()
     {
         goScreen.SetActive(true);
+        leManagerQuiNestPasUneInstance.SetActive(false);
         PlayerManager.Instance.player.activatePlayer(false);
     }
 
