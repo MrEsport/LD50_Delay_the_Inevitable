@@ -75,6 +75,8 @@ public class PlayerController : MonoBehaviour
 
 
                 rightClickUp();
+                
+                rotateCharacter();
             }
             else // Clibling---------------------------------------------------------------
             {
@@ -153,17 +155,24 @@ public class PlayerController : MonoBehaviour
         UIManager.Instance.OnPlanksUpdate.Invoke(plank);
     }
 
+    public void rotateCharacter()
+    {
+        Vector3 dir = Input.mousePosition - Camera.main.WorldToScreenPoint(transform.position);
+        
+        if(dir.x < transform.position.x )transform.eulerAngles = new Vector3(0, 180, 0);
+        else  transform.eulerAngles = new Vector3(0, 0, 0);
+    }
+
     void move()
     {
         if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
         {
             rb.velocity = new Vector2(speed, rb.velocity.y);
-            transform.eulerAngles = new Vector3(0, 0, 0);
+           
         }
         else if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
         {
             rb.velocity = new Vector2(-speed, rb.velocity.y);
-            transform.eulerAngles = new Vector3(0, 180, 0);
         }
         else
         {

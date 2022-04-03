@@ -1455,6 +1455,14 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 3503472600786302396, guid: 49cced1ec00666b45b86ca5490382430, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.718
+      objectReference: {fileID: 0}
+    - target: {fileID: 3503472601905151025, guid: 49cced1ec00666b45b86ca5490382430, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.116
+      objectReference: {fileID: 0}
     - target: {fileID: 5443125960599390865, guid: 49cced1ec00666b45b86ca5490382430, type: 3}
       propertyPath: m_Name
       value: Boat (1)
