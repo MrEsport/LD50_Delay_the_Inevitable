@@ -16,6 +16,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private float ladderSpeed;
     [SerializeField] private boatLocation location;
+    [SerializeField] private Animator playerAnim;
+    private bool isMovingAnim = false;
 
     [Header("Ladders")]
     [SerializeField] private LADDERENUM closeToLadderenum;
@@ -168,15 +170,29 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
         {
             rb.velocity = new Vector2(speed, rb.velocity.y);
-           
+            if (!isMovingAnim)
+            {
+                playerAnim.SetTrigger("Run");
+                isMovingAnim = true;
+            }
         }
         else if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
         {
             rb.velocity = new Vector2(-speed, rb.velocity.y);
+            if (!isMovingAnim)
+            {
+                playerAnim.SetTrigger("Run");
+                isMovingAnim = true;
+            }
         }
         else
         {
             rb.velocity = new Vector2(0, rb.velocity.y);
+            if (isMovingAnim)
+            {
+                playerAnim.SetTrigger("Idle");
+                isMovingAnim = false;
+            }
         }
     }
 
