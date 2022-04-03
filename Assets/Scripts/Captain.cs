@@ -20,7 +20,7 @@ public class Captain : MonoBehaviour
     [SerializeField] private float HullDamageAndRepairValue = .5f;
     [SerializeField] private int minHolesNumber = 3;
 
-    private int hullHoles = 3;
+    public int hullHoles = 3;
 
     private void Awake()
     {
@@ -65,6 +65,7 @@ public class Captain : MonoBehaviour
     {
         hullHoles += value;
         UIManager.Instance.OnHolesUpdate.Invoke(hullHoles);
+        ResourceManager.Instance.CheckToSpawn();
     }
 
     private void LowerShipLevel(float percentage)

@@ -19,6 +19,7 @@ public class EnemyManager : MonoBehaviour
     private int waveNumber = 0;
     private bool waveFinished = false; // all enemies killed
     private bool waveOngoing = true; // spawning new enemies
+    [SerializeField] private float startDelayTime = 5;
 
     private float timer;
     
@@ -27,7 +28,7 @@ public class EnemyManager : MonoBehaviour
         waveFinished = false; 
         waveOngoing = true;
         numOfEnemiesToSpawn = BaseEnemiesSpawnRate;
-        SpawnEnemy();
+        timer = startDelayTime;
     }
 
     void Update()
