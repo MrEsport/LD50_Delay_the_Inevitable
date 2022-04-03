@@ -14,7 +14,7 @@ public class plankBoxe : MonoBehaviour
     {
         if (collision.CompareTag("Bullet"))
         {
-            PlayerManager.Instance.player.plank++;
+            PlayerManager.Instance.player.AddToPlankNumber(1);
             transform.DOKill();
             Destroy((collision.gameObject));
             Destroy(this.gameObject);

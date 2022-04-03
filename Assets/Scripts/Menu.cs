@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
+    public GameObject main;
+    public GameObject theCrew;
+    public GameObject theTuto;
     public void Play()
     {
         SceneManager.LoadScene("Enemy");
@@ -17,6 +20,20 @@ public class Menu : MonoBehaviour
 
     public void HTP()
     {
-        Debug.Log("C'est le tuto mais flemme");
+        theTuto.SetActive(true);   
+        main.SetActive(false);   
+    }
+
+    public void crew()
+    {
+        theCrew.SetActive(true);   
+        main.SetActive(false);   
+    }
+    
+    public void backToMain()
+    {
+        main.SetActive(true);
+        theCrew.SetActive(false);
+        theTuto.SetActive(false);
     }
 }
