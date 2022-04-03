@@ -12,6 +12,7 @@ public class UIManager : MonoBehaviour
 
     public Image bucketEmpty;
     public Image bucketFilled;
+    public Image ProgressFill;
 
     public GameObject planksUI;
     public Text plankCount;
@@ -35,7 +36,18 @@ public class UIManager : MonoBehaviour
 
     private void UpdateBucketFill(float value)
     {
-        bucketFilled.fillAmount = value;
+        ProgressFill.fillAmount = value;
+
+        if(value <= 0)
+        {
+            bucketEmpty.enabled = true;
+            bucketFilled.enabled = false;
+        }
+        else if(value >= 1)
+        {
+            bucketEmpty.enabled = false;
+            bucketFilled.enabled = true;
+        }
     }
 
     private void UpdatePlanksCount(int value)
