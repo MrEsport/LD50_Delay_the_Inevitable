@@ -27,10 +27,7 @@ public class UIManager : MonoBehaviour
     {
         if (Instance == null)
             Instance = this;
-    }
 
-    private void Start()
-    {
         OnBucketUpdate.AddListener(UpdateBucketFill);
         OnPlanksUpdate.AddListener(UpdatePlanksCount);
         OnHolesUpdate.AddListener(UpdateHolesCount);
