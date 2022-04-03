@@ -7,7 +7,13 @@ public class plankBoxe : MonoBehaviour
 {
     private void Start()
     {
-        transform.DOMoveX(-transform.position.x, 15).SetEase(Ease.Linear);
+        transform.DOMoveX(-transform.position.x, 15).SetEase(Ease.Linear).onComplete += GoBack;
+    }
+
+    public void GoBack()
+    {
+        transform.DOMoveX(-transform.position.x, 15).SetEase(Ease.Linear).onComplete += GoBack;
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -16,7 +22,8 @@ public class plankBoxe : MonoBehaviour
         {
             PlayerManager.Instance.player.AddToPlankNumber(1);
             transform.DOKill();
-            Destroy((collision.gameObject));
+            ResourceManager.Instance.BarrelPickedup();
+            Destroy(collision.gameObject);
             Destroy(this.gameObject);
         }
     }
