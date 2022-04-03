@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -29,6 +30,11 @@ public class Bar : MonoBehaviour
     {
         if (Instance == null)
             Instance = this;
+    }
+
+    private void Start()
+    {
+        isFlooding = true;
     }
 
     private void Update()
@@ -81,5 +87,10 @@ public class Bar : MonoBehaviour
         FloodLevel = Mathf.Clamp(FloodLevel, minFlood, maxFlood);
 
         OnFloodValueChanged.Invoke(Mathf.RoundToInt(FloodLevel) / maxFlood);
+
+        if (FloodLevel == maxFlood)
+        {
+            GameOver.Instance.callGameOver();
+        }
     }
 }

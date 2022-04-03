@@ -11,8 +11,8 @@ public class PlayerController : MonoBehaviour
     private BoxCollider2D bc;
     private SpriteRenderer sr;
     public Gun gun;
-    
-    [Header("Movement")]
+
+    [Header("Movement")] private bool canMove;
     [SerializeField] private float speed;
     [SerializeField] private float ladderSpeed;
     [SerializeField] private boatLocation location;
@@ -52,91 +52,98 @@ public class PlayerController : MonoBehaviour
         bc = GetComponent<BoxCollider2D>();
         sr = transform.GetChild(0).GetComponent<SpriteRenderer>();
 
+        activatePlayer(true);
+        
         // Initialize UI
         UIManager.Instance.OnPlanksUpdate.Invoke(plank);
     }
 
     void Update()
     {
-        if (!isClibling) // Not Clibling---------------------------------------------------------------
+        if (canMove)
         {
-            move();
-
-            leftclick();
-
-            rightClickDown();
-
-
-            rightClick();
-            
-            
-            rightClickUp();
-        }
-        else // Clibling---------------------------------------------------------------
-        {
-            rb.gravityScale = 0;
-            bc.enabled = false;
-            float step = ladderSpeed * Time.deltaTime;
-            
-            transform.position = Vector2.MoveTowards(transform.position, target.position, step);
-            if (transform.position.y >= target.position.y - plusoumoins && transform.position.y <= target.position.y + plusoumoins) 
+            if (!isClibling) // Not Clibling---------------------------------------------------------------
             {
-                isClibling = false;
-                rb.gravityScale = 1;
-                bc.enabled = true;
+                move();
 
-                if (location == boatLocation.DECK) location = boatLocation.HOLD;
-                else location = boatLocation.DECK;
+                leftclick();
+
+                rightClickDown();
+
+
+                rightClick();
+
+
+                rightClickUp();
             }
-        }
-
-        switch (closeToLadderenum) // Near to a ladder ----------------------------------------------------------
-        {
-            case LADDERENUM.TOP :
-                if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S))
-                {
-                    rb.velocity = Vector2.zero;
-                    transform.position = lastLadder.GetComponent<Ladder>().topPos.position;
-                    target = lastLadder.GetComponent<Ladder>().bottomPos;
-                    isClibling = true;
-
-                }
-
-                break;
-            
-            case LADDERENUM.BOTTOM :
-                if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
-                {
-                    rb.velocity = Vector2.zero;
-                    transform.position = lastLadder.GetComponent<Ladder>().bottomPos.position;
-                    target = lastLadder.GetComponent<Ladder>().topPos;
-                    isClibling = true;
-                    
-                }
-
-                break;
-        }
-        
-        
-        
-        
-        
-
-        if (fillPourcent >= fillSpeed)
-        {
-            switch (location)
+            else // Clibling---------------------------------------------------------------
             {
-                case boatLocation.HOLD :
-                    if (!bucketFull)
+                rb.gravityScale = 0;
+                bc.enabled = false;
+                float step = ladderSpeed * Time.deltaTime;
+
+                transform.position = Vector2.MoveTowards(transform.position, target.position, step);
+                if (transform.position.y >= target.position.y - plusoumoins &&
+                    transform.position.y <= target.position.y + plusoumoins)
+                {
+                    isClibling = false;
+                    rb.gravityScale = 1;
+                    bc.enabled = true;
+
+                    if (location == boatLocation.DECK) location = boatLocation.HOLD;
+                    else location = boatLocation.DECK;
+                }
+            }
+
+            switch (closeToLadderenum) // Near to a ladder ----------------------------------------------------------
+            {
+                case LADDERENUM.TOP:
+                    if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S))
                     {
-                        bucketFull = true;
-                        Bar.Instance.BucketRemoveFlood(10f);
+                        rb.velocity = Vector2.zero;
+                        transform.position = lastLadder.GetComponent<Ladder>().topPos.position;
+                        target = lastLadder.GetComponent<Ladder>().bottomPos;
+                        isClibling = true;
+
                     }
+
+                    break;
+
+                case LADDERENUM.BOTTOM:
+                    if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
+                    {
+                        rb.velocity = Vector2.zero;
+                        transform.position = lastLadder.GetComponent<Ladder>().bottomPos.position;
+                        target = lastLadder.GetComponent<Ladder>().topPos;
+                        isClibling = true;
+
+                    }
+
                     break;
             }
 
-            clickUp = true;
-            fillPourcent = 0;
+
+
+
+
+
+            if (fillPourcent >= fillSpeed)
+            {
+                switch (location)
+                {
+                    case boatLocation.HOLD:
+                        if (!bucketFull)
+                        {
+                            bucketFull = true;
+                            Bar.Instance.BucketRemoveFlood(10f);
+                        }
+
+                        break;
+                }
+
+                clickUp = true;
+                fillPourcent = 0;
+            }
         }
     }
 
@@ -252,5 +259,15 @@ public class PlayerController : MonoBehaviour
             lastLadder = null;
         }
             
+    }
+
+
+    public void activatePlayer(bool on)
+    {
+        canMove = on;
+        if (!canMove)
+        {
+            rb.velocity = Vector2.zero;
+        }
     }
 }
