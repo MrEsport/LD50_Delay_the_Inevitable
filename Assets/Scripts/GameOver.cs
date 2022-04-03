@@ -26,6 +26,7 @@ public class GameOver : MonoBehaviour
     {
         goScreen.SetActive(true);
         leManagerQuiNestPasUneInstance.SetActive(false);
+        Score.Instance.stopScore = true;
         PlayerManager.Instance.player.activatePlayer(false);
     }
 
