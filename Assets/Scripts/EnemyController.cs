@@ -14,6 +14,7 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private Collider2D tentacleCollider;
     private float timer = 0;
     [SerializeField] ParticleSystem particles;
+    [SerializeField] private SpriteRenderer sr;
 
     private void Update()
     {
@@ -47,6 +48,9 @@ public class EnemyController : MonoBehaviour
     public void Entrance()
     {
         transform.position = startPoint.position;
+
+        if (transform.position.x > 0) sr.flipX = true;
+        
         transform.DOMoveY(transform.position.y + 2, 1).SetEase(Ease.InOutBack).onComplete += StartMovement;
 
     }
@@ -54,6 +58,13 @@ public class EnemyController : MonoBehaviour
     public void StartMovement()
     {
         transform.DOMoveX(endPoint.transform.position.x, tenticleToBoatTime).SetEase(Ease.InCubic).onComplete += BoatReached;
+        StartCoroutine(forAnimation());
+    }
+
+    IEnumerator forAnimation()
+    {
+        yield return new WaitForSeconds(3.5f);
+        sr.GetComponent<Animator>().SetTrigger("ChangeState");
     }
 
     public void BoatReached()

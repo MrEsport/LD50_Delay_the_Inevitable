@@ -1,0 +1,864 @@
+fileFormatVersion: 2
+guid: cf5c3f98315cb584c87dc92bef653b94
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4787407054366278948
+    second: kraken spritesheet-wiggle_0
+  - first:
+      213: 4688226547229890567
+    second: kraken spritesheet-wiggle_1
+  - first:
+      213: 1325147667395501482
+    second: kraken spritesheet-wiggle_2
+  - first:
+      213: 3565724969541406235
+    second: kraken spritesheet-wiggle_3
+  - first:
+      213: 200759637210183636
+    second: kraken spritesheet-wiggle_4
+  - first:
+      213: 3802661227622684740
+    second: kraken spritesheet-wiggle_5
+  - first:
+      213: 6363816651098121878
+    second: kraken spritesheet-wiggle_6
+  - first:
+      213: 6023906279122184462
+    second: kraken spritesheet-wiggle_7
+  - first:
+      213: 4224035664125387001
+    second: kraken spritesheet-wiggle_8
+  - first:
+      213: 2360803439573434766
+    second: kraken spritesheet-wiggle_9
+  - first:
+      213: 6878483970098330057
+    second: kraken spritesheet-wiggle_10
+  - first:
+      213: 2099201951360685575
+    second: kraken spritesheet-wiggle_11
+  - first:
+      213: 1005422315532262687
+    second: kraken spritesheet-wiggle_12
+  - first:
+      213: 5033280589490363681
+    second: kraken spritesheet-wiggle_13
+  - first:
+      213: -311766457870284703
+    second: kraken spritesheet-wiggle_14
+  - first:
+      213: 4030841799529953866
+    second: kraken spritesheet-wiggle_15
+  - first:
+      213: 2244579545189031496
+    second: kraken spritesheet-wiggle_16
+  - first:
+      213: -2636293350769845433
+    second: kraken spritesheet-wiggle_17
+  - first:
+      213: 7090893800452719346
+    second: kraken spritesheet-wiggle_18
+  - first:
+      213: 3033351559102278927
+    second: kraken spritesheet-wiggle_19
+  - first:
+      213: 1563621594100837002
+    second: kraken spritesheet-wiggle_20
+  - first:
+      213: -1329235171735040903
+    second: kraken spritesheet-wiggle_21
+  - first:
+      213: -612535157268070663
+    second: kraken spritesheet-wiggle_22
+  - first:
+      213: 7021717646215042124
+    second: kraken spritesheet-wiggle_23
+  - first:
+      213: -6990323121001404411
+    second: kraken spritesheet-wiggle_24
+  - first:
+      213: -1940704924832248925
+    second: kraken spritesheet-wiggle_25
+  - first:
+      213: -2242230565611341246
+    second: kraken spritesheet-wiggle_26
+  - first:
+      213: -1913980249997152540
+    second: kraken spritesheet-wiggle_27
+  - first:
+      213: -7728368060024395538
+    second: kraken spritesheet-wiggle_28
+  - first:
+      213: -546928489487128370
+    second: kraken spritesheet-wiggle_29
+  - first:
+      213: 3443198900954321457
+    second: kraken spritesheet-wiggle_30
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: kraken spritesheet-wiggle_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 431
+        width: 718.4375
+        height: 431
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42583b6e959407240800000000000000
+      internalID: 4787407054366278948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kraken spritesheet-wiggle_1
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 431
+        width: 718.4375
+        height: 431
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7089136943def0140800000000000000
+      internalID: 4688226547229890567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kraken spritesheet-wiggle_2
+      rect:
+        serializedVersion: 2
+        x: 1436
+        y: 431
+        width: 718.4375
+        height: 431
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaddb0658ced36210800000000000000
+      internalID: 1325147667395501482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kraken spritesheet-wiggle_3
+      rect:
+        serializedVersion: 2
+        x: 2154
+        y: 431
+        width: 718.4375
+        height: 431
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1e8140c7fffb7130800000000000000
+      internalID: 3565724969541406235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kraken spritesheet-wiggle_4
+      rect:
+        serializedVersion: 2
+        x: 2872
+        y: 431
+        width: 718.4375
+        height: 431
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d7362d83dd39c200800000000000000
+      internalID: 200759637210183636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kraken spritesheet-wiggle_5
+      rect:
+        serializedVersion: 2
+        x: 3590
+        y: 431
+        width: 718.4375
+        height: 431
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 448d9993d34c5c430800000000000000
+      internalID: 3802661227622684740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kraken spritesheet-wiggle_6
+      rect:
+        serializedVersion: 2
+        x: 4308
+        y: 431
+        width: 718.4375
+        height: 431
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6966b68f681d05850800000000000000
+      internalID: 6363816651098121878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kraken spritesheet-wiggle_7
+      rect:
+        serializedVersion: 2
+        x: 5026
+        y: 431
+        width: 718.4375
+        height: 431
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e09a25748d6399350800000000000000
+      internalID: 6023906279122184462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kraken spritesheet-wiggle_8
+      rect:
+        serializedVersion: 2
+        x: 5744
+        y: 431
+        width: 718.4375
+        height: 431
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f066ce7e0ace9a30800000000000000
+      internalID: 4224035664125387001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kraken spritesheet-wiggle_9
+      rect:
+        serializedVersion: 2
+        x: 6462
+        y: 431
+        width: 718.4375
+        height: 431
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e818b40683243c020800000000000000
+      internalID: 2360803439573434766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kraken spritesheet-wiggle_10
+      rect:
+        serializedVersion: 2
+        x: 7180
+        y: 431
+        width: 718.4375
+        height: 431
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c9fdee1ab8457f50800000000000000
+      internalID: 6878483970098330057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kraken spritesheet-wiggle_11
+      rect:
+        serializedVersion: 2
+        x: 7898
+        y: 431
+        width: 718.4375
+        height: 431
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70619ae7d0dd12d10800000000000000
+      internalID: 2099201951360685575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kraken spritesheet-wiggle_12
+      rect:
+        serializedVersion: 2
+        x: 8616
+        y: 431
+        width: 718.4375
+        height: 431
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1d1d8ed44af3fd00800000000000000
+      internalID: 1005422315532262687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kraken spritesheet-wiggle_13
+      rect:
+        serializedVersion: 2
+        x: 9334
+        y: 431
+        width: 718.4375
+        height: 431
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12d1177570ec9d540800000000000000
+      internalID: 5033280589490363681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kraken spritesheet-wiggle_14
+      rect:
+        serializedVersion: 2
+        x: 10052
+        y: 431
+        width: 718.4375
+        height: 431
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16882c1fe026cabf0800000000000000
+      internalID: -311766457870284703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kraken spritesheet-wiggle_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 718.4375
+        height: 431
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4a77c6a24d60f730800000000000000
+      internalID: 4030841799529953866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kraken spritesheet-wiggle_16
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 0
+        width: 718.4375
+        height: 431
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84e991d3439562f10800000000000000
+      internalID: 2244579545189031496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kraken spritesheet-wiggle_17
+      rect:
+        serializedVersion: 2
+        x: 1436
+        y: 0
+        width: 718.4375
+        height: 431
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74b93a74a210a6bd0800000000000000
+      internalID: -2636293350769845433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kraken spritesheet-wiggle_18
+      rect:
+        serializedVersion: 2
+        x: 2154
+        y: 0
+        width: 718.4375
+        height: 431
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f20104a75ae76260800000000000000
+      internalID: 7090893800452719346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kraken spritesheet-wiggle_19
+      rect:
+        serializedVersion: 2
+        x: 2872
+        y: 0
+        width: 718.4375
+        height: 431
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0d2b2feb21a81a20800000000000000
+      internalID: 3033351559102278927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kraken spritesheet-wiggle_20
+      rect:
+        serializedVersion: 2
+        x: 3590
+        y: 0
+        width: 718.4375
+        height: 431
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8aa28f2e8913b510800000000000000
+      internalID: 1563621594100837002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kraken spritesheet-wiggle_21
+      rect:
+        serializedVersion: 2
+        x: 4308
+        y: 0
+        width: 718.4375
+        height: 431
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97c07c567ab9d8de0800000000000000
+      internalID: -1329235171735040903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kraken spritesheet-wiggle_22
+      rect:
+        serializedVersion: 2
+        x: 5026
+        y: 0
+        width: 718.4375
+        height: 431
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fe39921586df77f0800000000000000
+      internalID: -612535157268070663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kraken spritesheet-wiggle_23
+      rect:
+        serializedVersion: 2
+        x: 5744
+        y: 0
+        width: 718.4375
+        height: 431
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c445dbf1ff6227160800000000000000
+      internalID: 7021717646215042124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kraken spritesheet-wiggle_24
+      rect:
+        serializedVersion: 2
+        x: 6462
+        y: 0
+        width: 718.4375
+        height: 431
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 508e28368226dfe90800000000000000
+      internalID: -6990323121001404411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kraken spritesheet-wiggle_25
+      rect:
+        serializedVersion: 2
+        x: 7180
+        y: 0
+        width: 718.4375
+        height: 431
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3abc585372b3115e0800000000000000
+      internalID: -1940704924832248925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kraken spritesheet-wiggle_26
+      rect:
+        serializedVersion: 2
+        x: 7898
+        y: 0
+        width: 718.4375
+        height: 431
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24a76303e2ff1e0e0800000000000000
+      internalID: -2242230565611341246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kraken spritesheet-wiggle_27
+      rect:
+        serializedVersion: 2
+        x: 8616
+        y: 0
+        width: 718.4375
+        height: 431
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ee6ec37a1d2075e0800000000000000
+      internalID: -1913980249997152540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kraken spritesheet-wiggle_28
+      rect:
+        serializedVersion: 2
+        x: 9334
+        y: 0
+        width: 718.4375
+        height: 431
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee865c032325fb490800000000000000
+      internalID: -7728368060024395538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kraken spritesheet-wiggle_29
+      rect:
+        serializedVersion: 2
+        x: 10052
+        y: 0
+        width: 718.4375
+        height: 431
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec82492cf6be868f0800000000000000
+      internalID: -546928489487128370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kraken spritesheet-wiggle_30
+      rect:
+        serializedVersion: 2
+        x: 10770
+        y: 0
+        width: 718.4375
+        height: 431
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 132d5665823b8cf20800000000000000
+      internalID: 3443198900954321457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

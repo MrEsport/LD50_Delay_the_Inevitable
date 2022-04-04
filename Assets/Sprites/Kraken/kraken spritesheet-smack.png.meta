@@ -1,0 +1,816 @@
+fileFormatVersion: 2
+guid: 162e2bd75d613234abc5ee99c8905aae
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4678052943644778718
+    second: kraken spritesheet-smack_0
+  - first:
+      213: -6533541161459163453
+    second: kraken spritesheet-smack_1
+  - first:
+      213: -8062761375338204477
+    second: kraken spritesheet-smack_2
+  - first:
+      213: 4458284544084953854
+    second: kraken spritesheet-smack_3
+  - first:
+      213: -5693668418916070078
+    second: kraken spritesheet-smack_4
+  - first:
+      213: 103858060212114561
+    second: kraken spritesheet-smack_5
+  - first:
+      213: 423839199603947035
+    second: kraken spritesheet-smack_6
+  - first:
+      213: 2508267412513370867
+    second: kraken spritesheet-smack_7
+  - first:
+      213: 2147553241448625290
+    second: kraken spritesheet-smack_8
+  - first:
+      213: 569077905493853543
+    second: kraken spritesheet-smack_9
+  - first:
+      213: -1630602578791307411
+    second: kraken spritesheet-smack_10
+  - first:
+      213: -619205618667235685
+    second: kraken spritesheet-smack_11
+  - first:
+      213: 1022956709125646892
+    second: kraken spritesheet-smack_12
+  - first:
+      213: -1064258039595491575
+    second: kraken spritesheet-smack_13
+  - first:
+      213: -6110848070039981573
+    second: kraken spritesheet-smack_14
+  - first:
+      213: -3105205097966104881
+    second: kraken spritesheet-smack_15
+  - first:
+      213: 3330806019225232766
+    second: kraken spritesheet-smack_16
+  - first:
+      213: 8267428990170120727
+    second: kraken spritesheet-smack_17
+  - first:
+      213: -1664460018252822273
+    second: kraken spritesheet-smack_18
+  - first:
+      213: 3766687036253134603
+    second: kraken spritesheet-smack_19
+  - first:
+      213: -2238278481727767875
+    second: kraken spritesheet-smack_20
+  - first:
+      213: 2456402065813668906
+    second: kraken spritesheet-smack_21
+  - first:
+      213: -1445332360982762567
+    second: kraken spritesheet-smack_22
+  - first:
+      213: 1514197500731341782
+    second: kraken spritesheet-smack_23
+  - first:
+      213: -1303041967991144568
+    second: kraken spritesheet-smack_24
+  - first:
+      213: -803515703616781503
+    second: kraken spritesheet-smack_25
+  - first:
+      213: 6930942397499966154
+    second: kraken spritesheet-smack_26
+  - first:
+      213: -4375180084526871229
+    second: kraken spritesheet-smack_27
+  - first:
+      213: 5267599888131980130
+    second: kraken spritesheet-smack_28
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: kraken spritesheet-smack_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 429.5
+        width: 715.4
+        height: 429.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed0ea6aed58cbe040800000000000000
+      internalID: 4678052943644778718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kraken spritesheet-smack_1
+      rect:
+        serializedVersion: 2
+        x: 715
+        y: 429.5
+        width: 715.4
+        height: 429.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ce55d90ee23455a0800000000000000
+      internalID: -6533541161459163453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kraken spritesheet-smack_2
+      rect:
+        serializedVersion: 2
+        x: 1430
+        y: 429.5
+        width: 715.4
+        height: 429.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c2f93a5f315b1090800000000000000
+      internalID: -8062761375338204477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kraken spritesheet-smack_3
+      rect:
+        serializedVersion: 2
+        x: 2145
+        y: 429.5
+        width: 715.4
+        height: 429.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efa4ccdfb220fdd30800000000000000
+      internalID: 4458284544084953854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kraken spritesheet-smack_4
+      rect:
+        serializedVersion: 2
+        x: 2860
+        y: 429.5
+        width: 715.4
+        height: 429.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24dc5a54db60cf0b0800000000000000
+      internalID: -5693668418916070078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kraken spritesheet-smack_5
+      rect:
+        serializedVersion: 2
+        x: 3575
+        y: 429.5
+        width: 715.4
+        height: 429.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18411020b5af07100800000000000000
+      internalID: 103858060212114561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kraken spritesheet-smack_6
+      rect:
+        serializedVersion: 2
+        x: 4290
+        y: 429.5
+        width: 715.4
+        height: 429.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b167746a187c1e500800000000000000
+      internalID: 423839199603947035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kraken spritesheet-smack_7
+      rect:
+        serializedVersion: 2
+        x: 5005
+        y: 429.5
+        width: 715.4
+        height: 429.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f23c8c1ce72fc220800000000000000
+      internalID: 2508267412513370867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kraken spritesheet-smack_8
+      rect:
+        serializedVersion: 2
+        x: 5720
+        y: 429.5
+        width: 715.4
+        height: 429.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a84b8cc7b44adcd10800000000000000
+      internalID: 2147553241448625290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kraken spritesheet-smack_9
+      rect:
+        serializedVersion: 2
+        x: 6435
+        y: 429.5
+        width: 715.4
+        height: 429.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7650c760755c5e700800000000000000
+      internalID: 569077905493853543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kraken spritesheet-smack_10
+      rect:
+        serializedVersion: 2
+        x: 7150
+        y: 429.5
+        width: 715.4
+        height: 429.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d67ee49089fee59e0800000000000000
+      internalID: -1630602578791307411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kraken spritesheet-smack_11
+      rect:
+        serializedVersion: 2
+        x: 7865
+        y: 429.5
+        width: 715.4
+        height: 429.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b96d96045c32867f0800000000000000
+      internalID: -619205618667235685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kraken spritesheet-smack_12
+      rect:
+        serializedVersion: 2
+        x: 8580
+        y: 429.5
+        width: 715.4
+        height: 429.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2a690405b5423e00800000000000000
+      internalID: 1022956709125646892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kraken spritesheet-smack_13
+      rect:
+        serializedVersion: 2
+        x: 9295
+        y: 429.5
+        width: 715.4
+        height: 429.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90f9e80a3fefa31f0800000000000000
+      internalID: -1064258039595491575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kraken spritesheet-smack_14
+      rect:
+        serializedVersion: 2
+        x: 10010
+        y: 429.5
+        width: 715.4
+        height: 429.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf1b2e49e08e13ba0800000000000000
+      internalID: -6110848070039981573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kraken spritesheet-smack_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0.5
+        width: 715.4
+        height: 429.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fce8ffc5a6818e4d0800000000000000
+      internalID: -3105205097966104881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kraken spritesheet-smack_16
+      rect:
+        serializedVersion: 2
+        x: 715
+        y: 0.5
+        width: 715.4
+        height: 429.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7527a75d66693e20800000000000000
+      internalID: 3330806019225232766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kraken spritesheet-smack_17
+      rect:
+        serializedVersion: 2
+        x: 1430
+        y: 0.5
+        width: 715.4
+        height: 429.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7124bd42ddecbb270800000000000000
+      internalID: 8267428990170120727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kraken spritesheet-smack_18
+      rect:
+        serializedVersion: 2
+        x: 2145
+        y: 0.5
+        width: 715.4
+        height: 429.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff8433d9e66a6e8e0800000000000000
+      internalID: -1664460018252822273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kraken spritesheet-smack_19
+      rect:
+        serializedVersion: 2
+        x: 2860
+        y: 0.5
+        width: 715.4
+        height: 429.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0fdfe717e5f54430800000000000000
+      internalID: 3766687036253134603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kraken spritesheet-smack_20
+      rect:
+        serializedVersion: 2
+        x: 3575
+        y: 0.5
+        width: 715.4
+        height: 429.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dba373c649900f0e0800000000000000
+      internalID: -2238278481727767875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kraken spritesheet-smack_21
+      rect:
+        serializedVersion: 2
+        x: 4290
+        y: 0.5
+        width: 715.4
+        height: 429.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a240c5e0aa4e61220800000000000000
+      internalID: 2456402065813668906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kraken spritesheet-smack_22
+      rect:
+        serializedVersion: 2
+        x: 5005
+        y: 0.5
+        width: 715.4
+        height: 429.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bbee3910e521fbe0800000000000000
+      internalID: -1445332360982762567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kraken spritesheet-smack_23
+      rect:
+        serializedVersion: 2
+        x: 5720
+        y: 0.5
+        width: 715.4
+        height: 429.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6db30e6ba92830510800000000000000
+      internalID: 1514197500731341782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kraken spritesheet-smack_24
+      rect:
+        serializedVersion: 2
+        x: 6435
+        y: 0.5
+        width: 715.4
+        height: 429.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88f3672eb3aaaede0800000000000000
+      internalID: -1303041967991144568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kraken spritesheet-smack_25
+      rect:
+        serializedVersion: 2
+        x: 7150
+        y: 0.5
+        width: 715.4
+        height: 429.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 143497a89b659d4f0800000000000000
+      internalID: -803515703616781503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kraken spritesheet-smack_26
+      rect:
+        serializedVersion: 2
+        x: 7865
+        y: 0.5
+        width: 715.4
+        height: 429.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac20ea98367af2060800000000000000
+      internalID: 6930942397499966154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kraken spritesheet-smack_27
+      rect:
+        serializedVersion: 2
+        x: 8580
+        y: 0.5
+        width: 715.4
+        height: 429.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34d8961d4ec3843c0800000000000000
+      internalID: -4375180084526871229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kraken spritesheet-smack_28
+      rect:
+        serializedVersion: 2
+        x: 9295
+        y: 0.5
+        width: 715.4
+        height: 429.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26b7ef670364a1940800000000000000
+      internalID: 5267599888131980130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
