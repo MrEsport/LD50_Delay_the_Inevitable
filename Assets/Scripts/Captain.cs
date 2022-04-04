@@ -38,14 +38,6 @@ public class Captain : MonoBehaviour
         UIManager.Instance.OnHolesUpdate.Invoke(hullHoles);
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.T))
-            OnShipHit.Invoke();
-        if (Input.GetKeyDown(KeyCode.R))
-            OnShipRepair.Invoke();
-    }
-
     private void AddHole()
     {
         AddToHoleNumber(1);
