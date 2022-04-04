@@ -854,6 +854,32 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &339711022 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7392395587084056301, guid: 49cced1ec00666b45b86ca5490382430, type: 3}
+  m_PrefabInstance: {fileID: 1371737837}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &339711026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 339711022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af97f85423e720a47abac6f3ca0ac6c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Dies
+    clip: {fileID: 8300000, guid: 705b3d8d84798994b991b8c2ca480ee8, type: 3}
+    audioMixerGroup: {fileID: 24300002, guid: 0fb6609d22125384dad3436d3e091d31, type: 2}
+    volume: 0.6
+    pitch: 0.9
+    playOnAwake: 0
+    loop: 0
+    source: {fileID: 0}
 --- !u!1 &385776638
 GameObject:
   m_ObjectHideFlags: 0
@@ -1486,6 +1512,32 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 708986993}
   m_CullTransparentMesh: 1
+--- !u!1 &733647476 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2347761001870656198, guid: 49cced1ec00666b45b86ca5490382430, type: 3}
+  m_PrefabInstance: {fileID: 1371737837}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &733647480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 733647476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af97f85423e720a47abac6f3ca0ac6c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Dies
+    clip: {fileID: 8300000, guid: 705b3d8d84798994b991b8c2ca480ee8, type: 3}
+    audioMixerGroup: {fileID: 24300002, guid: 0fb6609d22125384dad3436d3e091d31, type: 2}
+    volume: 0.6
+    pitch: 0.8
+    playOnAwake: 0
+    loop: 0
+    source: {fileID: 0}
 --- !u!1 &787940127
 GameObject:
   m_ObjectHideFlags: 0
@@ -2703,16 +2755,32 @@ PrefabInstance:
       value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 5928645112884712205, guid: 49cced1ec00666b45b86ca5490382430, type: 3}
+      propertyPath: sound
+      value: 
+      objectReference: {fileID: 733647480}
+    - target: {fileID: 5928645112884712205, guid: 49cced1ec00666b45b86ca5490382430, type: 3}
       propertyPath: triggerValue
-      value: 55
+      value: 67
+      objectReference: {fileID: 0}
+    - target: {fileID: 5928645112884712205, guid: 49cced1ec00666b45b86ca5490382430, type: 3}
+      propertyPath: triggerSoundName
+      value: Dies
       objectReference: {fileID: 0}
     - target: {fileID: 6733790711275050916, guid: 49cced1ec00666b45b86ca5490382430, type: 3}
       propertyPath: m_SortingOrder
       value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 8923623516441621404, guid: 49cced1ec00666b45b86ca5490382430, type: 3}
+      propertyPath: sound
+      value: 
+      objectReference: {fileID: 339711026}
+    - target: {fileID: 8923623516441621404, guid: 49cced1ec00666b45b86ca5490382430, type: 3}
       propertyPath: triggerValue
-      value: 55
+      value: 56
+      objectReference: {fileID: 0}
+    - target: {fileID: 8923623516441621404, guid: 49cced1ec00666b45b86ca5490382430, type: 3}
+      propertyPath: triggerSoundName
+      value: Dies
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49cced1ec00666b45b86ca5490382430, type: 3}

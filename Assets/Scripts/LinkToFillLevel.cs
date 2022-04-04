@@ -8,6 +8,9 @@ public class LinkToFillLevel : MonoBehaviour
     [SerializeField] private Sprite newSprite;
     [SerializeField] private bool doOnce = false;
 
+    [SerializeField] private SoundM sound;
+    [SerializeField] private string triggerSoundName;
+
     private bool doneOnce = false;
 
     private void Start()
@@ -27,6 +30,9 @@ public class LinkToFillLevel : MonoBehaviour
                 doneOnce = true;
 
             GetComponent<SpriteRenderer>().sprite = newSprite;
+
+            if (sound != null)
+                sound.Play(triggerSoundName);
         }
     }
 
