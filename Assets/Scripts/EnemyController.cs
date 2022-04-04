@@ -15,6 +15,7 @@ public class EnemyController : MonoBehaviour
     private float timer = 0;
     [SerializeField] ParticleSystem particles;
     [SerializeField] private SpriteRenderer sr;
+    [SerializeField] private SoundM sound;
 
     private void Update()
     {
@@ -53,6 +54,7 @@ public class EnemyController : MonoBehaviour
         
         transform.DOMoveY(transform.position.y + 2, 1).SetEase(Ease.InOutBack).onComplete += StartMovement;
 
+        sound.Play("Spawn");
     }
 
     public void StartMovement()
@@ -72,7 +74,7 @@ public class EnemyController : MonoBehaviour
         Instantiate(particles, transform.position, Quaternion.identity);
         Captain.myCaptain.OnShipHit?.Invoke();
         transform.DOMoveY(transform.position.y - 10, 1f).SetEase(Ease.Linear).onComplete += WaitToAttackAgain;
-
+        sound.Play("Hit");
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -81,7 +83,6 @@ public class EnemyController : MonoBehaviour
         {
             transform.DOKill();
             enemyManager.EnemyKilled();
-            Debug.Log("dead");
             Destroy((collision.gameObject));
             Destroy(this.gameObject);
         }

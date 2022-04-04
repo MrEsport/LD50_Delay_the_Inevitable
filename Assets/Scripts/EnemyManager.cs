@@ -22,6 +22,7 @@ public class EnemyManager : MonoBehaviour
     [SerializeField] private float startDelayTime = 5;
 
     private float timer;
+    private SoundM sound;
     
     void Start()
     {
@@ -29,6 +30,7 @@ public class EnemyManager : MonoBehaviour
         waveOngoing = true;
         numOfEnemiesToSpawn = BaseEnemiesSpawnRate;
         timer = startDelayTime;
+        sound = GetComponent<SoundM>();
     }
 
     void Update()
@@ -77,6 +79,7 @@ public class EnemyManager : MonoBehaviour
             waveNumber++;
             numOfEnemiesToSpawn = waveNumber + BaseEnemiesSpawnRate;
         }
+        sound.Play("Death");
     }
 
     public void ResetWave()

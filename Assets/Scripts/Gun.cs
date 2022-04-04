@@ -15,6 +15,14 @@ public class Gun : MonoBehaviour
     
     [Header("BulletProperties")] 
     [SerializeField] private float speed;
+
+    private SoundM sound;
+
+    private void Start()
+    {
+        sound = GetComponent<SoundM>();
+    }
+
     void Update()
     {
         Vector3 dir = Input.mousePosition - Camera.main.WorldToScreenPoint(transform.position);
@@ -41,6 +49,8 @@ public class Gun : MonoBehaviour
                 projectile.GetComponent<Rigidbody2D>().velocity = dir.normalized * speed;
 
                 actualCoolDown = coolDown;
+
+                sound.Play("GunFire");
             }
         }
         else

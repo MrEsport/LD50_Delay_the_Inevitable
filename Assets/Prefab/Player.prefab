@@ -122,6 +122,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3864766390257863098}
   - component: {fileID: 3864766390257863099}
+  - component: {fileID: 9216188396215483308}
   m_Layer: 0
   m_Name: Gun
   m_TagString: Untagged
@@ -161,6 +162,27 @@ MonoBehaviour:
   spawnPoint: {fileID: 3864766390133206709}
   coolDown: 0.75
   speed: 15
+--- !u!114 &9216188396215483308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3864766390257863093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af97f85423e720a47abac6f3ca0ac6c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: GunFire
+    clip: {fileID: 8300000, guid: afd7efee00a7bba498c5e2b53a5a8141, type: 3}
+    audioMixerGroup: {fileID: 24300002, guid: 0fb6609d22125384dad3436d3e091d31, type: 2}
+    volume: 0.1
+    pitch: 1
+    playOnAwake: 0
+    loop: 0
+    source: {fileID: 0}
 --- !u!1 &3864766391048564603
 GameObject:
   m_ObjectHideFlags: 0
@@ -173,6 +195,7 @@ GameObject:
   - component: {fileID: 3864766391048564601}
   - component: {fileID: 3864766391048564600}
   - component: {fileID: 3864766391048564607}
+  - component: {fileID: 5409455591014679319}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -268,6 +291,35 @@ MonoBehaviour:
   bucketFull: 0
   fillSpeed: 1
   plank: 0
+--- !u!114 &5409455591014679319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3864766391048564603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af97f85423e720a47abac6f3ca0ac6c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: BucketFill
+    clip: {fileID: 8300000, guid: 63e655656e0acfe4eabd3a6af85d6300, type: 3}
+    audioMixerGroup: {fileID: 24300002, guid: 0fb6609d22125384dad3436d3e091d31, type: 2}
+    volume: 0.1
+    pitch: 1
+    playOnAwake: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: BucketEmpty
+    clip: {fileID: 8300000, guid: 6795d2bc4eed4ad43bd03d6f14ee81bc, type: 3}
+    audioMixerGroup: {fileID: 24300002, guid: 0fb6609d22125384dad3436d3e091d31, type: 2}
+    volume: 0.1
+    pitch: 1
+    playOnAwake: 0
+    loop: 0
+    source: {fileID: 0}
 --- !u!1001 &8728111473078787329
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -281,23 +333,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7747222966675013696, guid: db879f56c863e1c46897dbd7ec97d234, type: 3}
       propertyPath: m_Bounds.m_Center.y
-      value: -0.002294302
+      value: -0.0022933483
       objectReference: {fileID: 0}
     - target: {fileID: -7747222966675013696, guid: db879f56c863e1c46897dbd7ec97d234, type: 3}
       propertyPath: m_Bounds.m_Extent.x
-      value: 2.595
+      value: 2.5950003
       objectReference: {fileID: 0}
     - target: {fileID: -7747222966675013696, guid: db879f56c863e1c46897dbd7ec97d234, type: 3}
       propertyPath: m_Bounds.m_Extent.y
-      value: 3.2827058
+      value: 3.2827053
       objectReference: {fileID: 0}
     - target: {fileID: -5887625171560491193, guid: db879f56c863e1c46897dbd7ec97d234, type: 3}
       propertyPath: m_Bounds.m_Center.x
-      value: 0
+      value: 0.00000023841858
       objectReference: {fileID: 0}
     - target: {fileID: -5887625171560491193, guid: db879f56c863e1c46897dbd7ec97d234, type: 3}
       propertyPath: m_Bounds.m_Center.y
-      value: 0.00033003092
+      value: 0.00033009052
       objectReference: {fileID: 0}
     - target: {fileID: -5887625171560491193, guid: db879f56c863e1c46897dbd7ec97d234, type: 3}
       propertyPath: m_Bounds.m_Extent.x
@@ -313,7 +365,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -5296717536857124321, guid: db879f56c863e1c46897dbd7ec97d234, type: 3}
       propertyPath: m_Bounds.m_Center.y
-      value: 0.0000011920929
+      value: 0.00000166893
       objectReference: {fileID: 0}
     - target: {fileID: -5296717536857124321, guid: db879f56c863e1c46897dbd7ec97d234, type: 3}
       propertyPath: m_Bounds.m_Extent.x
@@ -417,15 +469,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1624541071263900541, guid: db879f56c863e1c46897dbd7ec97d234, type: 3}
       propertyPath: m_Bounds.m_Center.x
-      value: 0.00000023841858
+      value: 0.00000011920929
       objectReference: {fileID: 0}
     - target: {fileID: 1624541071263900541, guid: db879f56c863e1c46897dbd7ec97d234, type: 3}
       propertyPath: m_Bounds.m_Center.y
-      value: 0
+      value: 0.00000011920929
       objectReference: {fileID: 0}
     - target: {fileID: 1624541071263900541, guid: db879f56c863e1c46897dbd7ec97d234, type: 3}
       propertyPath: m_Bounds.m_Extent.x
-      value: 1.1150005
+      value: 1.1150004
       objectReference: {fileID: 0}
     - target: {fileID: 1624541071263900541, guid: db879f56c863e1c46897dbd7ec97d234, type: 3}
       propertyPath: m_Bounds.m_Extent.y
@@ -433,7 +485,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1908248433839248420, guid: db879f56c863e1c46897dbd7ec97d234, type: 3}
       propertyPath: m_Bounds.m_Center.x
-      value: 0.016621113
+      value: 0.016620874
       objectReference: {fileID: 0}
     - target: {fileID: 1908248433839248420, guid: db879f56c863e1c46897dbd7ec97d234, type: 3}
       propertyPath: m_Bounds.m_Center.y
@@ -441,11 +493,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1908248433839248420, guid: db879f56c863e1c46897dbd7ec97d234, type: 3}
       propertyPath: m_Bounds.m_Extent.x
-      value: 1.148379
+      value: 1.1483788
       objectReference: {fileID: 0}
     - target: {fileID: 1908248433839248420, guid: db879f56c863e1c46897dbd7ec97d234, type: 3}
       propertyPath: m_Bounds.m_Extent.y
-      value: 2.8561378
+      value: 2.8561373
       objectReference: {fileID: 0}
     - target: {fileID: 2561340588134644209, guid: db879f56c863e1c46897dbd7ec97d234, type: 3}
       propertyPath: m_LocalRotation.w
@@ -521,11 +573,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2911635053289437281, guid: db879f56c863e1c46897dbd7ec97d234, type: 3}
       propertyPath: m_Bounds.m_Center.x
-      value: 0.0019255877
+      value: 0.0019254684
       objectReference: {fileID: 0}
     - target: {fileID: 2911635053289437281, guid: db879f56c863e1c46897dbd7ec97d234, type: 3}
       propertyPath: m_Bounds.m_Center.y
-      value: -0.0010694265
+      value: -0.0010703802
       objectReference: {fileID: 0}
     - target: {fileID: 2911635053289437281, guid: db879f56c863e1c46897dbd7ec97d234, type: 3}
       propertyPath: m_Bounds.m_Extent.x
@@ -573,7 +625,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4796081033691068139, guid: db879f56c863e1c46897dbd7ec97d234, type: 3}
       propertyPath: m_Bounds.m_Center.x
-      value: -0.0018364191
+      value: -0.0018365383
       objectReference: {fileID: 0}
     - target: {fileID: 4796081033691068139, guid: db879f56c863e1c46897dbd7ec97d234, type: 3}
       propertyPath: m_Bounds.m_Center.y
@@ -581,11 +633,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4796081033691068139, guid: db879f56c863e1c46897dbd7ec97d234, type: 3}
       propertyPath: m_Bounds.m_Extent.x
-      value: 1.2681656
+      value: 1.2681653
       objectReference: {fileID: 0}
     - target: {fileID: 4796081033691068139, guid: db879f56c863e1c46897dbd7ec97d234, type: 3}
       propertyPath: m_Bounds.m_Extent.y
-      value: 1.3950009
+      value: 1.3950012
       objectReference: {fileID: 0}
     - target: {fileID: 5943434258875138087, guid: db879f56c863e1c46897dbd7ec97d234, type: 3}
       propertyPath: m_IsActive

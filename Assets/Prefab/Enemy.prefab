@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8369006444379001366}
   - component: {fileID: 4313011480491006329}
   - component: {fileID: 6713808034369038479}
+  - component: {fileID: 2193686684782895012}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -53,6 +54,7 @@ MonoBehaviour:
   tentacleCollider: {fileID: 6713808034369038479}
   particles: {fileID: 3294371649334735943, guid: bc6a11c37d6796640b3e70cd187cc40e, type: 3}
   sr: {fileID: 4358855770425863531}
+  sound: {fileID: 2193686684782895012}
 --- !u!70 &6713808034369038479
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -69,6 +71,43 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0.0068142414}
   m_Size: {x: 0.5, y: 3.0306177}
   m_Direction: 0
+--- !u!114 &2193686684782895012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 349525470493114135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af97f85423e720a47abac6f3ca0ac6c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Spawn
+    clip: {fileID: 8300000, guid: d3ab3661409a6f440a0793973f04ff2a, type: 3}
+    audioMixerGroup: {fileID: 24300002, guid: 0fb6609d22125384dad3436d3e091d31, type: 2}
+    volume: 0.15
+    pitch: 1
+    playOnAwake: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Hit
+    clip: {fileID: 8300000, guid: 42457ac276de2aa428a36a1f7f156049, type: 3}
+    audioMixerGroup: {fileID: 24300002, guid: 0fb6609d22125384dad3436d3e091d31, type: 2}
+    volume: 0.036
+    pitch: 1
+    playOnAwake: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Death
+    clip: {fileID: 8300000, guid: d0de0f990f9b4d747b6d6b6b8cb27ce9, type: 3}
+    audioMixerGroup: {fileID: 24300002, guid: 0fb6609d22125384dad3436d3e091d31, type: 2}
+    volume: 0.1
+    pitch: 0.6
+    playOnAwake: 0
+    loop: 0
+    source: {fileID: 0}
 --- !u!1 &6470705333673336091
 GameObject:
   m_ObjectHideFlags: 0

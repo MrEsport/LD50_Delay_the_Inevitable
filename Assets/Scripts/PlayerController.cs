@@ -33,9 +33,8 @@ public class PlayerController : MonoBehaviour
     private bool clickUp;
 
     [Header("Repaire")] public int plank;
-    
 
-
+    private SoundM sound;
 
     public enum boatLocation
     {
@@ -55,6 +54,8 @@ public class PlayerController : MonoBehaviour
         sr = transform.GetChild(0).GetComponent<SpriteRenderer>();
 
         activatePlayer(true);
+
+        sound = GetComponent<SoundM>();
         
         // Initialize UI
         UIManager.Instance.OnPlanksUpdate.Invoke(plank);
@@ -140,6 +141,8 @@ public class PlayerController : MonoBehaviour
                         {
                             bucketFull = true;
                             Bar.Instance.BucketRemoveFlood(10f);
+
+                            sound.Play("BucketFill");
                         }
 
                         break;
@@ -210,6 +213,7 @@ public class PlayerController : MonoBehaviour
                     {
                         Captain.myCaptain.OnShipRepair.Invoke();
                         AddToPlankNumber(-1);
+                        sound.Play("Repair");
                     }
 
                     break;
@@ -234,19 +238,23 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Mouse1))
         {
-            if (location == boatLocation.HOLD && bucketFull)
+            if (!bucketFull)
+                return;
+
+            if (location == boatLocation.HOLD)
             {
                 bucketFull = false;
                 Bar.Instance.BucketAddFlood(10f);
                 clickUp = true;
-
             }
 
-            if (location == boatLocation.DECK && bucketFull)
+            else if (location == boatLocation.DECK)
             {
                 bucketFull = false;
                 clickUp = true;
             }
+
+            sound.Play("BucketEmpty");
         }
     }
     

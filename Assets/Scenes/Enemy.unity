@@ -2151,6 +2151,40 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1212449234 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5443125960599390865, guid: 49cced1ec00666b45b86ca5490382430, type: 3}
+  m_PrefabInstance: {fileID: 1371737837}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1212449236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1212449234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af97f85423e720a47abac6f3ca0ac6c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: WaterFlow
+    clip: {fileID: 8300000, guid: 6cab1c3d26ca2164288cdbb391ca0fc7, type: 3}
+    audioMixerGroup: {fileID: 24300002, guid: 0fb6609d22125384dad3436d3e091d31, type: 2}
+    volume: 0.25
+    pitch: 0.9
+    playOnAwake: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: WaterFlow
+    clip: {fileID: 8300000, guid: 6cab1c3d26ca2164288cdbb391ca0fc7, type: 3}
+    audioMixerGroup: {fileID: 24300002, guid: 0fb6609d22125384dad3436d3e091d31, type: 2}
+    volume: 0.1
+    pitch: 0.7
+    playOnAwake: 1
+    loop: 1
+    source: {fileID: 0}
 --- !u!1 &1215068371
 GameObject:
   m_ObjectHideFlags: 0
@@ -2814,6 +2848,27 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 902320894918512275, guid: 86c33773e247d36479c72423e63c554c, type: 3}
   m_PrefabInstance: {fileID: 195128359}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1487945538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1487945535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af97f85423e720a47abac6f3ca0ac6c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Death
+    clip: {fileID: 8300000, guid: d0de0f990f9b4d747b6d6b6b8cb27ce9, type: 3}
+    audioMixerGroup: {fileID: 24300002, guid: 0fb6609d22125384dad3436d3e091d31, type: 2}
+    volume: 0.08
+    pitch: 0.6
+    playOnAwake: 0
+    loop: 0
+    source: {fileID: 0}
 --- !u!1 &1563963785
 GameObject:
   m_ObjectHideFlags: 0
@@ -3572,7 +3627,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -51.131}
   m_AnchorMin: {x: 0.4, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -11.7, y: 7.4}
+  m_AnchoredPosition: {x: -11.700001, y: 7.4000015}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2059670203
@@ -3647,7 +3702,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -98.916}
   m_AnchorMin: {x: 0.4, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -13.8, y: 2.2}
+  m_AnchoredPosition: {x: -13.799999, y: 2.2000008}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2095441051
@@ -3751,6 +3806,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5409455591014679319, guid: f8fa9f3a98b3b1c40874fb66a01d1a0e, type: 3}
+      propertyPath: sounds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5409455591014679319, guid: f8fa9f3a98b3b1c40874fb66a01d1a0e, type: 3}
+      propertyPath: sounds.Array.data[2].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 2e0a2b4ee2b1d3d458f9e334819edf67, type: 3}
+    - target: {fileID: 5409455591014679319, guid: f8fa9f3a98b3b1c40874fb66a01d1a0e, type: 3}
+      propertyPath: sounds.Array.data[2].name
+      value: Repair
+      objectReference: {fileID: 0}
+    - target: {fileID: 5409455591014679319, guid: f8fa9f3a98b3b1c40874fb66a01d1a0e, type: 3}
+      propertyPath: sounds.Array.data[2].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5409455591014679319, guid: f8fa9f3a98b3b1c40874fb66a01d1a0e, type: 3}
+      propertyPath: sounds.Array.data[0].volume
+      value: 0.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5409455591014679319, guid: f8fa9f3a98b3b1c40874fb66a01d1a0e, type: 3}
+      propertyPath: sounds.Array.data[1].volume
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5409455591014679319, guid: f8fa9f3a98b3b1c40874fb66a01d1a0e, type: 3}
+      propertyPath: sounds.Array.data[2].volume
+      value: 0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 5409455591014679319, guid: f8fa9f3a98b3b1c40874fb66a01d1a0e, type: 3}
+      propertyPath: sounds.Array.data[2].audioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: 0fb6609d22125384dad3436d3e091d31, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8fa9f3a98b3b1c40874fb66a01d1a0e, type: 3}
 --- !u!1 &2111489367
